@@ -1,0 +1,9 @@
+numbers:
+  sneaking: 5
+  moving: 200
+  interacting: 500
+points:
+  sneaking: 1
+  moving: 1
+  interacting: 1
+  joining: 1

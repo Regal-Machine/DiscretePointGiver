@@ -22,7 +22,6 @@ public class DiscretePointGiver extends JavaPlugin{
 		instance = this;
 		
 		saveDefaultConfig();
-		writeConfig();
 		ValueBag.loadValues();
 		
 		
@@ -34,33 +33,5 @@ public class DiscretePointGiver extends JavaPlugin{
 		Bukkit.getPluginManager().registerEvents(new Interacting(), this);
 	}
 
-	private void writeConfig() {
-		
-		if(!getConfig().contains("numbers"))
-			getConfig().createSection("numbers");
-		
-		if(!getConfig().isInt("numbers.sneaking"))
-			getConfig().addDefault("numbers.sneaking", 5);
-		if(!getConfig().isInt("numbers.moving"))
-			getConfig().addDefault("numbers.moving", 200);
-		if(!getConfig().isInt("numbers.interact"))
-			getConfig().addDefault("numbers.interacting", 500);
-		
-		
-		if(!getConfig().contains("points"))
-			getConfig().createSection("points");
-		if(!getConfig().isInt("points.sneaking"))
-			getConfig().addDefault("points.sneaking", 1);
-		if(!getConfig().isInt("points.moving"))
-			getConfig().addDefault("points.moving", 1);
-		if(!getConfig().isInt("points.interacting"))
-			getConfig().addDefault("points.interacting", 1);
-		if(!getConfig().isInt("points.joining"))
-			getConfig().addDefault("points.joining", 1);
-		
-		getConfig().options().copyDefaults(true);
-		saveConfig();
-		
-	}
 	
 }
