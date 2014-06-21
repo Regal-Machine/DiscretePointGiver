@@ -1,0 +1,4 @@
+name: DiscretePointGiver
+version: 1.0.0
+main: me.RegalMachine.DiscretePointGiver.DiscretePointGiver
+depend: [NeoPoints]
